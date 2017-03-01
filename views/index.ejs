@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <!-- Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.20/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.20/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.20/angular-resource.min.js"></script>
+    <script src="/angular/index.js"></script>
+
+    <!-- Template -->
+   <script type="text/ng-template" id="/lojas.html">
+     Buscar: <input type="text" ng-model="search.nome">
+     <ul>
+       <li ng-repeat="loja in lojas | filter: search">
+         <input type="checkbox" ng-model="loja.ativo" ng-change="update($index)">
+         <a href="http://{{loja.url}}.localhost:3000">{{loja.nome}}</a>
+         <button ng-click="edit($index)">editar</button>
+         <button ng-click="remove($index)">remover</button>
+       </li>
+     </ul>
+     Criar Loja <input type="text" ng-model="newLoja"><button ng-click="save()">Criar</button>
+   </script>
+
+   <script type="text/ng-template" id="/lojaDetails.html">
+     <h1>{{ loja.nome }}</h1>
+     Nome: <input type="text" ng-model="loja.nome"><br>
+     Ativo: <input type="checkbox" ng-model="loja.ativo"><br>
+     Descrição: <textarea ng-model="loja.descricao"></textarea><br><br>
+
+     <button ng-click="update()">Alterar</button>
+     <button ng-click="remove()">Remover</button>
+     <a href="/">Cancelar</a>
+   </script>
+
+    <ng-view></ng-view>
+
+  </body>
+</html>
