@@ -232,6 +232,10 @@
  2) Desktop
  ----------------------------------------*/
 @media only screen and (min-width: 992px) {
+.homepage-17 .resto-info{
+	position: fixed;
+	bottom: 0px;
+}
 #wrapper.boxed, .boxed #header {
 	max-width: 970px;
 	width: 100%;
