@@ -13,7 +13,7 @@
                   <div class="header-widget">
                     <ul class="nav">
                       <li class="menu-sec-parent">
-                        <a href="#" class="btn" data-toggle="modal" data-target="#myModal">Login</a>
+                        <a href="javascript:void(0);" data-toggle="modal" data-target="#myModal">Login</a>
                       </li>
                       <li class="menu-sec-parent">
                         <button class="btn btn-default btn-menu"> Publique </button>
@@ -36,17 +36,78 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index:99999">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
+      <script type="text/ng-template" id="/login" >
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Login</h4>
+        </div>
+        <div class="modal-body" ng-controller="LoginController">
+          <div id="login-page" >
+                  <form class="form-login" method="post" enctype="multipart/form-data" ng-submit="login()">
+                    <div class="login-wrap">
+                        <input type="text" class="form-control" placeholder="User ID" autofocus ng-model="usuario.login">
+                        <br>
+                        <input type="password" class="form-control" placeholder="Password" ng-model="usuario.pass">
+                        <label class="checkbox">
+                            <span class="pull-right">
+                                <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
+                            </span>
+                        </label>
+                        <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+
+                        <div class="login-social-link">
+                            <div class="modal-footer centered">
+                            <p>Ou você pode fazer login através de sua rede social</p>
+                                <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
+                                <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
+                            </div>
+                            <div class="registration">Não tem uma conta ainda?<br/>
+                                <a class="" href="#/cadastro">
+                                    Criar conta.
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                  </form>
+          </div>
+        </div>
+      </script>
+      <script type="text/ng-template" id="/cadastro">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Cadastrar Usuário</h4>
+        </div>
+        <div class="modal-body" ng-controller="CadastroController">
+          <div id="login-page">
+            <form class="form-login" method="post" enctype="multipart/form-data" ng-submit="save()">
+              <div class="login-wrap">
+                  <input type="text" class="form-control" placeholder="User ID" autofocus ng-model="usuario.login">
+                  <br>
+                  <input type="text" class="form-control" placeholder="Email" ng-model="usuario.email">
+                  <br>
+                  <input type="password" class="form-control" placeholder="Password" ng-model="usuario.pass">
+                  <br />
+                  <div class="modal-footer">
+                      <a class="btn btn-default" href="#/">Cancel</a>
+                      <button class="btn btn-theme" type="submit">Submit</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </script>
+
+      <ng-view></ng-view>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
+
     </div>
   </div>
 </div>
+
+<!--script for this page-->
+<script src="/angular/login.js"></script>

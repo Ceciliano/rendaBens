@@ -1,70 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Gifted Autodealer</title>
-<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-<!-- google fonts -->
-<link href='http://fonts.googleapis.com/css?family=Lato:400,700%7COxygen:400,700%7COpen+Sans%7CPT+Sans%7CPT+Sans+Narrow:400,700%7CDamion' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=CMontserrat:400,700%7COpen+Sans:400,300%7CLibre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
-<!-- Bootstrap -->
-<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/css/font-awesome.min.css" rel="stylesheet">
-<link href="assets/css/global.css" rel="stylesheet">
-<link href="assets/css/style.css" rel="stylesheet">
-<link href="assets/css/owl.carousel.css" rel="stylesheet">
-<link href="assets/css/auto-dealer.css" rel="stylesheet">
-<link href="assets/css/responsive.css" rel="stylesheet">
-<link href="assets/css/skin.less" rel="stylesheet/less">
-<link href="assets/css/transition-effect.css" rel="stylesheet">
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-
-</head>
+<html lang="en" ng-app="app">
+  <% include partials/head %>
 <body class="homepage-17">
 <div class="loader-block">
   <div class="loader">Loading...</div>
 </div>
 
-<!--header Section Start Here -->
-<header id="header">
-
-  <!--headerBox Start Here -->
-  <div class="header">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="container">
-              <div class="row">
-                <div class="col-xs-12 top">
-                  <a href="../Corporate/index.html" class="logo"><img src="assets/img/logo.png" alt="" /></a>
-                  <section class="menu-wrap">
-                    <ul class="nav">
-                      <li class="menu-sec-parent">
-                      </li>
-                    </ul>
-                    <div class="header-widget">
-                      <ul class="nav">
-                        <li class="menu-sec-parent">
-                          <button class="btn btn-default btn-menu">Publiquar</button>
-                        </li>
-                      </ul>
-                    </div>
-                  </section>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-  <!--headerCntr End Here -->
-</header>
-<!--header Section End Here -->
+  <!-- **********************************************************************************************************************************************************
+  TOP BAR CONTENT & NOTIFICATIONS
+  *********************************************************************************************************************************************************** -->
+  <!--header start-->
+     <% include partials/header %>
+  <!--header end-->
 
 <!--Wrapper Section Start Here -->
 <div id="wrapper">
@@ -352,96 +299,12 @@
   </section>
   <!--subscription End Here -->
 
-  <!--footer Section Start Here -->
-  <footer id="footer"  >
-    <div class="container">
-      <div class="row">
-
-        <!--primary-footer Start Here -->
-        <section class="primary-footer clearfix">
-          <div class="col-sm-6 col-md-3 intro footer-content">
-            <h3>Quem Somos</h3>
-            <div class="footer-block"> <strong>Nós amamos quem somos e estamos muito orgulhosos de fazer parte da sua renda extra.</strong>
-              <p> Estamos oferecendo uma forma de você conseguir alugar seus bens com rapidez e segurança.</p>
-              <p> Com nossa ferramenta você consegue saber o histórico de seu locatária.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3 footer-content latets-article">
-            <h3>Depoimentos</h3>
-            <div class="row footer-block">
-              <div class="col-xs-6 col-sm-12">
-                <article class="article-content">
-                  <figure class="article-pic"> <img src="assets/img/post-img.jpg" alt="Curabitur amet magna quam" /> </figure>
-                  <div class="post-content">
-                    <h4><a href="" title="Curabitur amet magna quam"> Amei essa forma de negociar.</a></h4>
-                    <span class="post-date"><i class="fa fa-calendar"></i>March 31, 2014</span> </div>
-                </article>
-              </div>
-              <div class="col-xs-6 col-sm-12">
-                <article class="article-content">
-                  <figure class="article-pic"> <img src="assets/img/post-img.jpg" alt="Curabitur amet magna quam" /> </figure>
-                  <div class="post-content">
-                    <h4><a href="" title="Curabitur amet magna quam"> Amei essa forma de negociar.</a></h4>
-                    <span class="post-date"><i class="fa fa-calendar"></i>March 31, 2014</span> </div>
-                </article>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3 footer-content">
-            <h3>Mata Do Site</h3>
-            <div class="footer-block">
-                <p> <a href="blog-post-1.html">Home</a> </p>
-                <p> <a href="blog-post-1.html">Pesquisa</a> </p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3 footer-content vcard">
-            <h3>Contato</h3>
-            <div class="footer-block">
-              <span class="tel"> <i class="fa fa-calendar">&nbsp;</i> <a href="tel:18003456789">55 21 986823562</a> </span> <span class="email"> <i class="fa fa-envelope">&nbsp;</i> <a href="mailto:rendabens@gmail.com">rendabens@gmail.com</a> </span> </div>
-          </div>
-        </section>
-        <!--primary-footer End Here -->
-
-      </div>
-    </div>
-    <div class="secondary-footer">
-      <div class="container">
-        <div class="row">
-          <!--secondary-footer Start Here -->
-          <section class="col-xs-12"> <span class="copyright">Renda Bens © Copyright 2017 - http://www.rendabens.com/</span>
-            <ul class="social-icons">
-              <li> <a href="http://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a> </li>
-            </ul>
-          </section>
-          <!--secondary-footer End Here -->
-        </div>
-      </div>
-    </div>
-  </footer>
-  <a href="javascript:;" class="scroll-top"> <i class="fa fa-long-arrow-up"></i> </a>
-  <!--footer Section End Here -->
+  <!--footer start-->
+     <% include partials/footer %>
+  <!--footer end-->
 
 </div>
 <!--Wrapper Section End Here -->
-
-<script src="assets/js/jquery-1.11.3.min.js"></script>
-<script src="assets/js/modernizr.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery-ui.js"></script>
-<script src="assets/js/less.js"></script>
-<script src="assets/js/jquery.countTo.js"></script>
-<!--countdown Js-->
-<script src="assets/js/jquery.plugin.js"></script>
-<script src="assets/js/jquery.countdown.min.js"></script>
-<script src="assets/js/masonry.pkgd.min.js"></script>
-<!--countdown Js End -->
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/jquery.flexslider.js"></script>
-<script src="assets/js/jquery.appear.js"></script>
-<script src="assets/js/jquery.shuffle.js"></script>
-
-<!-- flexslider Js -->
-<script src="assets/js/site.js"></script>
 
 </body>
 </html>

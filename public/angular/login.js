@@ -41,18 +41,15 @@ angular.module('app', ['ngRoute', 'ngResource'])
   }])
 
   //---------------
-  // Routes
-  //---------------
+ // Routes
+ //---------------
 
-  .config(['$routeProvider', function ($routeProvider) {
-
-    $routeProvider
-    .when('/', {
-        templateUrl: '/login',
-        controller: 'LoginController'
-     })
-     .when('/cadastro', {
-         templateUrl: '/cadastro',
-         controller: 'CadastroController'
-      });
-  }]);
+ .config(['$routeProvider', function ($routeProvider) {
+   $routeProvider
+   .when('/', {
+       templateUrl: '/login'
+    })
+    .when('/cadastro', {
+        templateUrl: '/cadastro'
+     });
+ }]);
