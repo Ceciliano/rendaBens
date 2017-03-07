@@ -1251,6 +1251,10 @@ transform:translateY(-10%);
 .btn.btn-default:focus {
 	color: #ffffff;
 }
+.btn.btn-theme{
+	color: #000000;
+}
+
 .img-description h3 a:hover {
 	text-decoration: none;
 }

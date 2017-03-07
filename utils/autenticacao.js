@@ -55,7 +55,6 @@ exports.manualLogin = function(login, pass, callback)
 				if (res){
 
 					callback(null, o);
-					callback('teste');
 				}	else{
 					callback('invalid-password');
 				}
