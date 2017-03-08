@@ -14,8 +14,6 @@ angular.module('app', ['ngRoute', 'ngResource'])
   // Controllers
   //---------------
   .controller('LoginController', ['$scope', 'Usuarios', '$location', '$window', function ($scope, Usuarios, $location, $window) {
-    $scope.usuario = {};
-
     $scope.login = function() {
       if(!$scope.usuario || $scope.usuario.length < 1) return;
       var usuario = new Usuarios($scope.usuario);

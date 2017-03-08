@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
   <% include partials/head %>
-<body class="homepage-17">
+<body class="homepage-17" ng-init="usuario = '<%= JSON.stringify(usuarioLogado) %>' ">
 <div class="loader-block">
   <div class="loader">Loading...</div>
 </div>
