@@ -75,13 +75,12 @@ exports.addNewAccount = function(newData, callback)
 				if (o){
 					callback('email-taken');
 				}	else{
-					saltAndHash(newData.pass, function(hash){
-						newData.pass = hash;
+					saltAndHash(newData.pass.s, function(hash){
+						newData.pass.s = hash;
 					// append date stamp when record was created //
 						// newData.date = moment().format('MMMM Do YYYY, h:mm:ss a');
 						Usuario.create(newData, function (err, post) {
 			        if (err) return next(err);
-							post.pass = hash;
 			        callback(null,post);
 			      });
 					});

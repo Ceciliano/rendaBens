@@ -1,9 +1,8 @@
-angular.module('app', ['ngRoute', 'ngResource'])
+angular.module('app', ['ngRoute', 'ngResource', 'ng-file-model'])
 
   //---------------
   // Services
   //---------------
-
   .factory('Usuarios', ['$resource', function($resource) {
     return $resource('/usuarios/', null, {
       'login': { url:'/usuarios/login/', method:'POST' }

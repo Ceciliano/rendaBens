@@ -7,11 +7,9 @@ var autenticacao = require('../utils/autenticacao');
 
 router.post('/', function(req, res){
   console.log('Usuario create');
-  autenticacao.addNewAccount({
-    login 	: req.body.login,
-    email 	: req.body.email,
-    pass	: req.body.pass
-  }, function(e, data){
+  console.log(req.body);
+
+  autenticacao.addNewAccount(req.body, function(e, data){
     if (e){
       console.log(e);
       res.status(400).send(data);
